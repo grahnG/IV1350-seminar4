@@ -8,7 +8,7 @@ package com.mycompany.seminarium3.integration;
  * Custom exception for handling scenarios where the database is unavailable.
  * This exception is used throughout the application to indicate issues related to database connectivity or accessibility.
  */
-public class DatabaseUnavailableException extends Exception{
+public class DatabaseUnavailableException extends RuntimeException{
     
     /**
      * Constructs a new DatabaseUnavailableException with the specified detail message.

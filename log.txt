@@ -1,2 +1,1 @@
-Invalid item idenfitier!
-r: 4568, is not valid!
+Database is currently unavailable, please contact the IT department

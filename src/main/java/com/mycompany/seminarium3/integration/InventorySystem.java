@@ -35,13 +35,11 @@ public class InventorySystem {
 
     /**
     * Checks if an item's identifier is valid and if the database is available.
-    * It throws an exception if the item's identifier isn't in the inventory or if a specific identifier (99) is used to simulate a database problem.
     *
     * @param item The item to check.
     * @throws InvalidItemIdentifierException if the item identifier is not found in the inventory.
-    * @throws DatabaseUnavailableException if the item identifier is 99, indicating a simulated database issue.
     */   
-    public void checkItemStatus (ItemDTO item) throws InvalidItemIdentifierException, DatabaseUnavailableException{
+    public void checkItemStatus (ItemDTO item) throws InvalidItemIdentifierException {
         int ID = item.getItemIdentifier();
         
         if (ID == 99){

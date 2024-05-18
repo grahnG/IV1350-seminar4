@@ -42,8 +42,8 @@ public class DatabaseUnavailableExceptionTest {
     }
     
     /**
-     * Tests if the exception is correctly recognized as an instance of the Exception class.
-     * Ensures that DatabaseUnavailableException is properly extending the Exception class.
+     * Tests if the exception is correctly recognized as an instance of the RuntimeException class.
+     * Ensures that DatabaseUnavailableException is properly extending the RuntimeException class.
      */
     @Test
     public void testExceptionInstance() {

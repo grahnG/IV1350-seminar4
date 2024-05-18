@@ -65,12 +65,10 @@ public class Controller {
     * @param item The item to add to the sale.
     * @param quantity The quantity of the item to add.
     * @throws InvalidItemIdentifierException if the item identifier is invalid.
-    * @throws DatabaseUnavailableException if the database is unavailable.
     */
    public void addItemToSale(ItemDTO item, int quantity) throws InvalidItemIdentifierException, DatabaseUnavailableException {
     try {
         systemCreator.getInventory().checkItemStatus(item);
-
         sale.addItemToSale(item, quantity);
     } catch (InvalidItemIdentifierException | DatabaseUnavailableException exception) {
         logger.log("DEVELOPER (log): " + exception.getMessage());
