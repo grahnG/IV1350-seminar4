@@ -36,9 +36,9 @@ public class View {
     public void runFakeExecution(){
         contr.startNewSale();
         System.out.println("A new sale has been started.");
-        ItemDTO oatmeal = new ItemDTO(29.90, 99, 6, "BigWheel Oatmeal 500 ml, whole grain oats,"
+        ItemDTO oatmeal = new ItemDTO(29.90, 123456, 6, "BigWheel Oatmeal 500 ml, whole grain oats,"
                 + " high fiber, gluten free", "BigWheel Oatmeal");
-        ItemDTO YouGoGo = new ItemDTO(14.90, 456, 6, "YouGoGo Blueberry 240 g, low sugar yogurt,"
+        ItemDTO YouGoGo = new ItemDTO(14.90, 4568, 6, "YouGoGo Blueberry 240 g, low sugar yogurt,"
                 + " blueberry flavour", "YouGoGo Blueberry");
         
         try{

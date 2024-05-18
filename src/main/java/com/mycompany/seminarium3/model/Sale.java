@@ -48,7 +48,7 @@ public class Sale {
     * @throws InvalidItemIdentifierException if the item identifier is invalid.
     * @throws DatabaseUnavailableException if the database is unavailable.
     */
-    public void addItemToSale(ItemDTO item, int quantity) throws InvalidItemIdentifierException, DatabaseUnavailableException {
+    public void addItemToSale(ItemDTO item, int quantity) throws InvalidItemIdentifierException {
     inventorySystem.checkItemStatus(item);
 
     int index = saleDTO.getItemIndex(item);
