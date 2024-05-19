@@ -27,7 +27,6 @@ public class InvalidItemIdentifierExceptionTest {
     
     /**
      * Cleans up the test environment after each test.
-     * Currently, no specific cleanup is required, but the method is included for completeness.
      */
     @AfterEach
     public void tearDown() {
@@ -50,5 +49,29 @@ public class InvalidItemIdentifierExceptionTest {
     public void testExceptionInstance() {
         assertTrue(exception instanceof Exception);
     }
+
+    /**
+     * Tests if the InvalidItemIdentifierException is thrown under simulated conditions where an invalid identifier is used.
+     */
+    @Test
+    public void testExceptionThrown() {
+        try {
+            checkItemIdentifier("123ABC");
+            fail("InvalidItemIdentifierException was expected but not thrown.");
+        } catch (InvalidItemIdentifierException ex) {
+            assertEquals("Invalid item identifier provided", ex.getMessage(), "The exception message should match the expected message.");
+        }
+    }
+
+    /**
+     * A helper method to simulate checking an item identifier that throws InvalidItemIdentifierException
+     * if the identifier does not meet specific criteria.
+     */
+    private void checkItemIdentifier(String identifier) throws InvalidItemIdentifierException {
+        if (!identifier.matches("\\d+")) {  
+            throw new InvalidItemIdentifierException("Invalid item identifier provided");
+        }
+    }
 }
+
 
